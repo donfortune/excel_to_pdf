@@ -13,11 +13,11 @@ for filepath in filepaths:
 
     invoice_nr = filename.split('-')[0]
     date = filename.split('-')[1]
-
+    #added invoice
     pdf.set_font(family='Times', size=16, style='B')
     pdf.cell(w=50, h=8, txt=f"Invoice nr: {invoice_nr}", ln=1)
 
-
+    #added date
     pdf.set_font(family='Times', size=16, style='B')
     pdf.cell(w=50, h=8, txt=f"Date: {date}")
     pdf.output(f"{filename}.pdf")
